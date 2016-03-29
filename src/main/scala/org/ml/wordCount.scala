@@ -1,6 +1,6 @@
-package org.test
+package org.ml
 
-import org.apache.spark.{SparkContext, SparkConf}
+import org.apache.spark.{SparkConf, SparkContext}
 
 /**
   * Created by obs on 3/14/16.
@@ -13,6 +13,7 @@ object wordCount {
         .setMaster("local")
 
     val sc = new SparkContext(conf)
+    //test
 
     val test = sc.textFile("/Users/obs/git/testSparkScala/src/test/resources/test_data/sample.txt")
     test.flatMap(line => line.split(" "))
