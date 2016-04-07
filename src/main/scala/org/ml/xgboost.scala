@@ -1,20 +1,20 @@
 package org.ml
 
+import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.mllib.evaluation.BinaryClassificationMetrics
 import org.apache.spark.mllib.linalg.Vectors
 import org.apache.spark.mllib.regression.LabeledPoint
 import org.apache.spark.mllib.tree.RandomForest
-import org.apache.spark.{SparkConf, SparkContext}
 
 
 /**
   * Created by obs on 3/14/16.
   */
-object randomForest {
+object xgboost {
 
   def main(args: Array[String]) = {
     val conf = new SparkConf()
-        .setAppName("randomForest")
+        .setAppName("xgboost  ")
         .setMaster("local")
 
     val sc = new SparkContext(conf)
